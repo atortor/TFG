@@ -1,0 +1,1070 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "textLanzarEncuesta",
+              "elicitationRequired": false,
+              "type": "textLanzarEncuesta",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "LanzarEncuestaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "textInscribirAsignatura",
+              "elicitationRequired": false,
+              "type": "textInscribirAsignatura",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "InscribirAsignaturaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "numero_opcion_titulacion",
+              "elicitationRequired": true,
+              "type": "Opcion_titulacion",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1096631813149.1179664873696"
+              }
+            }
+          ],
+          "name": "ElegirTitulacionIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "opcion_asignatura",
+              "elicitationRequired": true,
+              "type": "Opcion_asignatura_informatica",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1420146409619.1421432735455"
+              }
+            }
+          ],
+          "name": "ElegirAsignaturaInformaticaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre_titulo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1323505583618.956015495827"
+              }
+            }
+          ],
+          "name": "CrearTituloEncuestaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "fecha_opcion",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.857593102501.1677643312157"
+              }
+            }
+          ],
+          "name": "CrearOpcionesEncuestaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "opcion_examen",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1063922226583.1183607457684"
+              }
+            }
+          ],
+          "name": "EleccionVotacionAsignaturaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "textLanzarEncuesta",
+              "type": "textLanzarEncuesta"
+            }
+          ],
+          "name": "LanzarEncuestaIntent",
+          "samples": [
+            "{textLanzarEncuesta}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "textInscribirAsignatura",
+              "type": "textInscribirAsignatura"
+            }
+          ],
+          "name": "InscribirAsignaturaIntent",
+          "samples": [
+            "{textInscribirAsignatura}"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "Cierra",
+            "Finaliza la aplicación",
+            "Cierra la aplicación",
+            "Finaliza la skill",
+            "Cierra la skill",
+            "Adiós",
+            "Hasta luego"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "Qué hago",
+            "Ayuda",
+            "Ayúdame",
+            "No sé qué hacer"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "Calla",
+            "Cállate",
+            "Para",
+            "Párate"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "numero_opcion_titulacion",
+              "type": "Opcion_titulacion",
+              "samples": [
+                "la opción {numero_opcion_titulacion}",
+                "opción {numero_opcion_titulacion}",
+                "{numero_opcion_titulacion}"
+              ]
+            }
+          ],
+          "name": "ElegirTitulacionIntent",
+          "samples": [
+            "{numero_opcion_titulacion}",
+            "La opción {numero_opcion_titulacion}",
+            "Opción {numero_opcion_titulacion}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "opcion_asignatura",
+              "type": "Opcion_asignatura_informatica",
+              "samples": [
+                "Asignatura {opcion_asignatura}",
+                "La asignatura {opcion_asignatura}",
+                "{opcion_asignatura}"
+              ]
+            }
+          ],
+          "name": "ElegirAsignaturaInformaticaIntent",
+          "samples": [
+            "{opcion_asignatura} ",
+            "La asignatura {opcion_asignatura}",
+            "La opción {opcion_asignatura}",
+            "Opción {opcion_asignatura}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre_titulo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "El titulo es {nombre_titulo}",
+                "Es {nombre_titulo}"
+              ]
+            }
+          ],
+          "name": "CrearTituloEncuestaIntent",
+          "samples": [
+            "El título es {nombre_titulo}",
+            "Es {nombre_titulo}",
+            "El titulo es {nombre_titulo}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "fecha_opcion",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "la fecha es {fecha_opcion}",
+                "es el {fecha_opcion}",
+                "el {fecha_opcion}"
+              ]
+            }
+          ],
+          "name": "CrearOpcionesEncuestaIntent",
+          "samples": [
+            "Es el {fecha_opcion}",
+            "El {fecha_opcion}",
+            "La fecha es {fecha_opcion}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "opcion_examen",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "El dia {opcion_examen}"
+              ]
+            }
+          ],
+          "name": "EleccionVotacionAsignaturaIntent",
+          "samples": [
+            "El día de la opción {opcion_examen}",
+            "El día {opcion_examen}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "textVotacionesAbiertas",
+              "type": "textVotacionesAbiertas"
+            }
+          ],
+          "name": "VerVotacionesIntent",
+          "samples": [
+            "{textVotacionesAbiertas}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "recordar_opciones",
+              "type": "Recordar_opciones"
+            }
+          ],
+          "name": "RecordarOpcionesIntent",
+          "samples": [
+            "{recordar_opciones}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "VerAsignaturasIntent",
+          "samples": [
+            "Quiero ver asignaturas"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombrevotacion",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "VotarAsignaturaIntent",
+          "samples": [
+            "La votación con nombre {nombrevotacion}",
+            "La votación de nombre {nombrevotacion}",
+            "La votación llamada {nombrevotacion}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "opcion_asignatura_teleco",
+              "type": "Opcion_asignatura_teleco"
+            }
+          ],
+          "name": "ElegirAsignaturaTelecoIntent",
+          "samples": [
+            "Opción {opcion_asignatura_teleco}",
+            "La opción {opcion_asignatura_teleco}",
+            "La asignatura llamada {opcion_asignatura_teleco}",
+            "{opcion_asignatura_teleco}",
+            "La asignatura {opcion_asignatura_teleco}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "textEliminarEncuesta",
+              "type": "textEliminarEncuesta"
+            }
+          ],
+          "name": "EliminarVotacionIntent",
+          "samples": [
+            "{textEliminarEncuesta}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "crear"
+              }
+            },
+            {
+              "name": {
+                "value": "hacer"
+              }
+            },
+            {
+              "name": {
+                "value": "lanzar"
+              }
+            }
+          ],
+          "name": "Lanzamiento"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "votacion"
+              }
+            },
+            {
+              "name": {
+                "value": "encuesta"
+              }
+            }
+          ],
+          "name": "Encuesta"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "apuntarme"
+              }
+            },
+            {
+              "name": {
+                "value": "registrarme"
+              }
+            },
+            {
+              "name": {
+                "value": "inscribirme"
+              }
+            }
+          ],
+          "name": "Inscribir"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "materia"
+              }
+            },
+            {
+              "name": {
+                "value": "asignatura"
+              }
+            }
+          ],
+          "name": "Asignatura"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "votar"
+              }
+            },
+            {
+              "name": {
+                "value": "participar"
+              }
+            },
+            {
+              "name": {
+                "value": "observar"
+              }
+            },
+            {
+              "name": {
+                "value": "ver"
+              }
+            }
+          ],
+          "name": "Votar"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Informática"
+                ],
+                "value": "Ingeniería Informática"
+              },
+              "id": "1"
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Teleco"
+                ],
+                "value": "Ingeniería de Tecnologías de Telecomunicación"
+              },
+              "id": "2"
+            }
+          ],
+          "name": "Opcion_titulacion"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Diseño y Desarrollo de Sistemas de Información"
+              },
+              "id": "DDSI"
+            },
+            {
+              "name": {
+                "value": "Modelos de Computación"
+              },
+              "id": "MC"
+            },
+            {
+              "name": {
+                "value": "Ingeniería de Servidores"
+              },
+              "id": "ISE"
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Ingeniería del Software"
+              },
+              "id": "FIS"
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Bases de Datos"
+              },
+              "id": "FBD"
+            },
+            {
+              "name": {
+                "value": "Algorítimica"
+              },
+              "id": "ALG"
+            },
+            {
+              "name": {
+                "value": "Arquitectura de Computadores"
+              },
+              "id": "AC"
+            },
+            {
+              "name": {
+                "value": "Programación y Diseño Orientado a Objetos"
+              },
+              "id": "PDOO"
+            },
+            {
+              "name": {
+                "value": "Estructura de Datos"
+              },
+              "id": "ED"
+            },
+            {
+              "name": {
+                "value": "Estructura de Computadores"
+              },
+              "id": "EC"
+            },
+            {
+              "name": {
+                "value": "Ingeniería, Empresa y Sociedad"
+              },
+              "id": "IES"
+            },
+            {
+              "name": {
+                "value": "Metodología de la Programación"
+              },
+              "id": "MP"
+            },
+            {
+              "name": {
+                "value": "Tecnología y Organización de Computadores"
+              },
+              "id": "TOC"
+            },
+            {
+              "name": {
+                "value": "Estadística"
+              },
+              "id": "ES"
+            },
+            {
+              "name": {
+                "value": "Lógica y Métodos Discretos"
+              },
+              "id": "LMD"
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Programación"
+              },
+              "id": "FP"
+            },
+            {
+              "name": {
+                "value": "Fundamentos Físicos y Tecnológicos"
+              },
+              "id": "FFT"
+            },
+            {
+              "name": {
+                "value": "Cálculo"
+              },
+              "id": "CA"
+            },
+            {
+              "name": {
+                "value": "Álgebra Lineal y Estructuras Matemáticas"
+              },
+              "id": "ALEM"
+            },
+            {
+              "name": {
+                "value": "Informática Gráfica"
+              },
+              "id": "IG"
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Redes"
+              },
+              "id": "FR"
+            },
+            {
+              "name": {
+                "value": "Inteligencia Artificial"
+              },
+              "id": "IA"
+            },
+            {
+              "name": {
+                "value": "Sistemas Operativos"
+              },
+              "id": "SO"
+            },
+            {
+              "name": {
+                "value": "Sistemas Concurrentes y Distribuidos"
+              },
+              "id": "SCD"
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Software"
+              },
+              "id": "FS"
+            }
+          ],
+          "name": "Opcion_asignatura_informatica"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Transmisión de Datos y Redes de Computadores"
+              }
+            },
+            {
+              "name": {
+                "value": "Sistemas de Conmutación"
+              }
+            },
+            {
+              "name": {
+                "value": "Sistemas Electrónicos Digitales"
+              }
+            },
+            {
+              "name": {
+                "value": "Electrónica de Potencia"
+              }
+            },
+            {
+              "name": {
+                "value": "Comunicaciones 2"
+              }
+            },
+            {
+              "name": {
+                "value": "Señales Digitales"
+              }
+            },
+            {
+              "name": {
+                "value": "Infraestructuras y Redes de Comunicación"
+              }
+            },
+            {
+              "name": {
+                "value": "Electrónica Digital"
+              }
+            },
+            {
+              "name": {
+                "value": "Electrónica Analógica"
+              }
+            },
+            {
+              "name": {
+                "value": "Comunicaciones 1"
+              }
+            },
+            {
+              "name": {
+                "value": "Transmisión de Ondas"
+              }
+            },
+            {
+              "name": {
+                "value": "Teoría de la Comunicación"
+              }
+            },
+            {
+              "name": {
+                "value": "Sistemas Telemáticos"
+              }
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Programación"
+              }
+            },
+            {
+              "name": {
+                "value": "Sistemas Lineales"
+              }
+            },
+            {
+              "name": {
+                "value": "Fundamentos Físicos de la Ingeniería"
+              }
+            },
+            {
+              "name": {
+                "value": "Estadística y Optimización"
+              }
+            },
+            {
+              "name": {
+                "value": "Ecuaciones Diferenciales y Cálculo Numérico"
+              }
+            },
+            {
+              "name": {
+                "value": "Componentes y Circuitos Electrónicos"
+              }
+            },
+            {
+              "name": {
+                "value": "Álgebra Lineal y Geometría"
+              }
+            },
+            {
+              "name": {
+                "value": "Ingeniería, Empresa y Sociedad"
+              }
+            },
+            {
+              "name": {
+                "value": "Fundamentos de Informática"
+              }
+            },
+            {
+              "name": {
+                "value": "Análisis de Circuitos"
+              }
+            },
+            {
+              "name": {
+                "value": "Análisis Matemático"
+              }
+            }
+          ],
+          "name": "Opcion_asignatura_teleco"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "lanzar votación"
+              }
+            },
+            {
+              "name": {
+                "value": "lanzar encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "quiero lanzar una votación"
+              }
+            },
+            {
+              "name": {
+                "value": "quiero lanzar una encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "crear votación"
+              }
+            },
+            {
+              "name": {
+                "value": "crear encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "quiero crear una encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "quiero crear una votación"
+              }
+            }
+          ],
+          "name": "textLanzarEncuesta"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Inscribir en asignatura"
+              }
+            },
+            {
+              "name": {
+                "value": "Inscribirme"
+              }
+            },
+            {
+              "name": {
+                "value": "Inscribirme en asignatura"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiero inscribirme en una asignatura"
+              }
+            }
+          ],
+          "name": "textInscribirAsignatura"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Votaciones disponibles"
+              }
+            },
+            {
+              "name": {
+                "value": "Votaciones abiertas"
+              }
+            },
+            {
+              "name": {
+                "value": "Me gustaría ver las votaciones abiertas"
+              }
+            },
+            {
+              "name": {
+                "value": "Ver votaciones abiertas"
+              }
+            },
+            {
+              "name": {
+                "value": "Ver votaciones"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiero ver votaciones abiertas"
+              }
+            }
+          ],
+          "name": "textVotacionesAbiertas"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Quiero quitar una votación"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiero quitar una encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiero borrar una encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiero eliminar una encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiero eliminar una votación"
+              }
+            },
+            {
+              "name": {
+                "value": "Borrar votación"
+              }
+            },
+            {
+              "name": {
+                "value": "Borrar encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "Quitar votación"
+              }
+            },
+            {
+              "name": {
+                "value": "Quitar encuesta"
+              }
+            },
+            {
+              "name": {
+                "value": "Eliminar votación"
+              }
+            },
+            {
+              "name": {
+                "value": "Eliminar encuesta"
+              }
+            }
+          ],
+          "name": "textEliminarEncuesta"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Recuérdame cuáles son las opciones"
+              }
+            },
+            {
+              "name": {
+                "value": "Cuáles son las opciones"
+              }
+            },
+            {
+              "name": {
+                "value": "Dígame las opciones"
+              }
+            },
+            {
+              "name": {
+                "value": "Repítame las opciones"
+              }
+            },
+            {
+              "name": {
+                "value": "Repítame"
+              }
+            },
+            {
+              "name": {
+                "value": "Recuérdame las opciones"
+              }
+            },
+            {
+              "name": {
+                "value": "Repita"
+              }
+            }
+          ],
+          "name": "Recordar_opciones"
+        }
+      ],
+      "invocationName": "voto universidad granada"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede decirme el número de la votación?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Puede decirme el número de la encuesta?"
+          }
+        ],
+        "id": "Elicit.Slot.684763776376.122106448094"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Qué opción ha dicho?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetirme la opción?"
+          }
+        ],
+        "id": "Elicit.Slot.1096631813149.1179664873696"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetirme la asignatura?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Que asignatura ha dicho?"
+          }
+        ],
+        "id": "Elicit.Slot.1420146409619.1421432735455"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetirme la opción?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Qué opción ha dicho?"
+          }
+        ],
+        "id": "Elicit.Slot.610212395222.1654286818195"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetirme la asignatura?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Qué asignatura ha dicho?"
+          }
+        ],
+        "id": "Elicit.Slot.1407605562820.1129702810524"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetir el título?"
+          }
+        ],
+        "id": "Elicit.Slot.1323505583618.956015495827"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Perfecto. El título es {nombre_titulo} . ¿Es correcto?"
+          }
+        ],
+        "id": "Confirm.Slot.1323505583618.956015495827"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetirme la fecha de la opcion?"
+          }
+        ],
+        "id": "Elicit.Slot.857593102501.1677643312157"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Puede repetir el dia?"
+          }
+        ],
+        "id": "Elicit.Slot.1063922226583.1183607457684"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "el {fecha_opcion}"
+          },
+          {
+            "type": "PlainText",
+            "value": "{fecha_opcion}"
+          },
+          {
+            "type": "PlainText",
+            "value": "es el {fecha_opcion}"
+          }
+        ],
+        "id": "Confirm.Slot.1449023644378.579222350411"
+      }
+    ]
+  }
+}
