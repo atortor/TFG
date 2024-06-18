@@ -1,0 +1,23 @@
+{
+  "name": "apiprocessmining",
+  "version": "1.0.0",
+  "description": "API de servicios web que sea capaz de recuperar la traza de interacción con un sistema de diálogo de un sistema conversacional, como Alexa, y formatear los datos para que sea procesable por herramientas de minería de procesos, como Disco",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Antonio Javier Torres Torres",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "express": "^4.19.2",
+    "express-myconnection": "^1.0.4",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
