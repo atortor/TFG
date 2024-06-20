@@ -23,16 +23,33 @@ db.connect((err) => {
     console.log('Conexión a la base de datos establecida');
 });
 
-// Ejemplo de consulta
-app.get('/ejemplo', (req, res) => {
-    db.query('SELECT * FROM asignaturas_table', (err, result) => {
-        if (err) {
-            console.error('Error al ejecutar consulta:', err);
-            res.status(500).json({ error: 'Error al ejecutar consulta' });
-            return;
-        }
-        res.json(result);
-    });
+// Endpoint para manejar solicitudes de Dialogflow
+app.post('/webhook', (req, res) => {
+    const intent = req.body.queryResult.intent.displayName;
+
+    if (intent === 'InscribirAsignaturaInformaticaIntent') {
+        const person = req.body.queryResult.parameters.person;
+        const opcion_titulacion = req.body.queryResult.parameters.opcion_titulacion;
+        const opcion_asignatura_informatica = req.body.queryResult.parameters.opcion_asignatura_informatica;
+
+        const sql = 'INSERT INTO asignaturas_table (nombre_usuario, titulacion, asignatura) VALUES (?, ?, ?)';
+        db.query(sql, [person, opcion_titulacion, opcion_asignatura_informatica], (err, result) => {
+            if (err) {
+                console.error('Error al insertar datos:', err);
+                return res.send({
+                    fulfillmentText: 'Hubo un error al inscribir la asignatura. Por favor, inténtalo de nuevo.'
+                });
+            }
+
+            res.send({
+                fulfillmentText: `Asignatura ${opcion_asignatura_informatica} inscrita correctamente para ${person}.`
+            });
+        });
+    } else {
+        res.send({
+            fulfillmentText: 'No entendí tu solicitud.'
+        });
+    }
 });
 
 // Iniciar servidor
