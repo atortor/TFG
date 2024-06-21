@@ -7,6 +7,7 @@
     <list default="true" id="cddd2e7c-6533-425b-8620-bce0f7d4cd29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../APIprocessmining/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../APIprocessmining/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <workItem from="1718877818172" duration="189000" />
       <workItem from="1718878210969" duration="2317000" />
       <workItem from="1718882168238" duration="43000" />
-      <workItem from="1718960208449" duration="1220000" />
+      <workItem from="1718960208449" duration="2152000" />
     </task>
     <servers />
   </component>

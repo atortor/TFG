@@ -26,7 +26,10 @@ db.connect((err) => {
 // Endpoint para manejar solicitudes de Dialogflow
 app.post('/webhook', (req, res) => {
     const intent = req.body.queryResult.intent.displayName;
+    const parameters = req.body.queryResult.parameters;
 
+    console.log('Parameters received:', parameters);
+    
     if (intent === 'InscribirAsignaturaInformaticaIntent') {
         const person = req.body.queryResult.parameters.person;
         const opcion_titulacion = req.body.queryResult.parameters.opcion_titulacion;
