@@ -33,9 +33,21 @@ app.post('/webhook', (req, res) => {
         const opcion_asignatura_informatica = req.body.queryResult.parameters.opcion_asignatura_informatica;
 
         // Verificar que todos los parámetros estén presentes
-        if (!person || !opcion_titulacion || !opcion_asignatura_informatica) {
+        if (!person) {
             return res.send({
-                fulfillmentText: 'Necesito saber tu nombre, la titulación y la asignatura para inscribirte. Por favor, proporciona todos los detalles.'
+                fulfillmentText: 'Necesito saber tu nombre'
+            });
+        }
+
+        if (!opcion_titulacion) {
+            return res.send({
+                fulfillmentText: 'Necesito saber la titulacion'
+            });
+        }
+
+        if (!opcion_asignatura_informatica) {
+            return res.send({
+                fulfillmentText: 'Necesito saber la asignatura'
             });
         }
 
