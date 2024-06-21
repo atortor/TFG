@@ -32,6 +32,14 @@ app.post('/webhook', (req, res) => {
         const opcion_titulacion = req.body.queryResult.parameters.opcion_titulacion;
         const opcion_asignatura_informatica = req.body.queryResult.parameters.opcion_asignatura_informatica;
 
+        // Verificar que todos los parámetros estén presentes
+        if (!person || !opcion_titulacion || !opcion_asignatura_informatica) {
+            return res.send({
+                fulfillmentText: 'Necesito saber tu nombre, la titulación y la asignatura para inscribirte. Por favor, proporciona todos los detalles.'
+            });
+        }
+
+        // SQL para insertar datos en la tabla asignaturas_table
         const sql = 'INSERT INTO asignaturas_table (nombre_usuario, titulacion, asignatura) VALUES (?, ?, ?)';
         db.query(sql, [person, opcion_titulacion, opcion_asignatura_informatica], (err, result) => {
             if (err) {
