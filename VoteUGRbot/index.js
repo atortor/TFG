@@ -29,11 +29,11 @@ app.post('/webhook', (req, res) => {
     const parameters = req.body.queryResult.parameters;
 
     console.log('Parameters received:', parameters);
-    
+
     if (intent === 'InscribirAsignaturaInformaticaIntent') {
-        const person = req.body.queryResult.parameters.person;
-        const opcion_titulacion = req.body.queryResult.parameters.opcion_titulacion;
-        const opcion_asignatura_informatica = req.body.queryResult.parameters.opcion_asignatura_informatica;
+        const person = parameters['person'] ? parameters['person'].name : null;
+        const opcion_titulacion = parameters['opcion_titulacion'];
+        const opcion_asignatura_informatica = parameters['opcion_asignatura_informatica'];
 
         // Verificar que todos los parámetros estén presentes
         if (!person) {
